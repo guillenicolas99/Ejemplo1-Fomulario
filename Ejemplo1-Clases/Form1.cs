@@ -13,27 +13,9 @@ namespace Ejemplo1_Clases
     public partial class Form1 : Form
     {
 
-        private string nombre;
-        private string direccion;
-        private string telefono;
-        private string email;
-
-        public string Nombre { get => nombre; set => nombre = value; }
-        public string Direccion { get => direccion; set => direccion = value; }
-        public string Telefono { get => telefono; set => telefono = value; }
-        public string Email { get => email; set => email = value; }
-
         public Form1()
         {
             InitializeComponent();
-        }
-
-        public Form1(string nombre, string direccion, string telefono, string email)
-        {
-            this.nombre = nombre;
-            this.direccion = direccion;
-            this.telefono = telefono;
-            this.email = email;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -49,8 +31,13 @@ namespace Ejemplo1_Clases
 
         private void listaDeCentros_Click(object sender, EventArgs e)
         {
-            FrmListaCentro listarCentro= new FrmListaCentro();
-            listarCentro.ShowDialog();
+            if(GlobalList.Centros.Count > 0)
+            {
+                FrmListaCentro listarCentro= new FrmListaCentro();
+                listarCentro.ShowDialog();
+            }
+            MessageBox.Show("Campo vacío, favor ingrese los datos", "confirmar", MessageBoxButtons.OK);
+
         }
 
         private void agregarProfesor_Click(object sender, EventArgs e)
@@ -60,9 +47,14 @@ namespace Ejemplo1_Clases
         }
 
         private void listaDeProfesoresToolStripMenuItem_Click(object sender, EventArgs e)
-        { 
-            FrmListaProfesores listaProfesores= new FrmListaProfesores();
-            listaProfesores.ShowDialog();
+        {
+            if (GlobalList.Profesores.Count > 0)
+            {
+                FrmListaProfesores listaProfesores = new FrmListaProfesores();
+                listaProfesores.ShowDialog();
+            }
+            else
+                MessageBox.Show("Campo vacío, favor ingrese los datos", "confirmar", MessageBoxButtons.OK);
         }
     }
 }
