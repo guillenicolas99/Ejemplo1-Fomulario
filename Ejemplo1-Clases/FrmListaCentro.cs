@@ -21,5 +21,16 @@ namespace Ejemplo1_Clases
         {
             Close();
         }
+
+        private void FrmListaCentro_Load(object sender, EventArgs e)
+        {
+            lstvCentro.DataSource = GlobalList.Centros;
+
+        }
+
+        private void lstvCentro_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

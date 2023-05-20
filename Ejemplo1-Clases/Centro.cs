@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejemplo1_Clases
 {
-    class Centro
+    public class Centro
     {
         string nombre;
         string dir;

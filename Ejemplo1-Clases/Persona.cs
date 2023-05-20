@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejemplo1_Clases
 {
-    class Persona
+    public class Persona
     {
         //campos
         string id;
@@ -24,6 +24,16 @@ namespace Ejemplo1_Clases
             this.Id = id;
             this.Nombre = Nombre;
         }
+
+        public Persona(string id, string nombre, string direccion, string telf, string email)
+        {
+            this.id = id;
+            this.nombre = nombre;
+            this.direccion = direccion;
+            this.telf = telf;
+            this.email = email;
+        }
+
         //Propiedades
         public string Id { get { return this.id; } set { this.id = value; } }
        public string Nombre { get { return this.nombre; } set { this.nombre = value; } }

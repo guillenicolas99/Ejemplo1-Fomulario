@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Ejemplo1_Clases
 {
     //Implementamos la herenciA
-    class Profesor:Persona
+    public class Profesor:Persona
     {
         //campo
         string iNSS;
@@ -18,7 +18,7 @@ namespace Ejemplo1_Clases
         //Constructor
         public Profesor()
         { }
-        public Profesor(string iNSS, double salario)
+        public Profesor(string id, string nombre, string direccion, string telf, string email, string iNSS, double salario):base(id, nombre, direccion, telf, email)
         {
             this.iNSS = iNSS;
             this.salario = salario;

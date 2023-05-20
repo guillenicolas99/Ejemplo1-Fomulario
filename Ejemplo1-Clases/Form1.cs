@@ -12,6 +12,7 @@ namespace Ejemplo1_Clases
 {
     public partial class Form1 : Form
     {
+
         private string nombre;
         private string direccion;
         private string telefono;
@@ -50,6 +51,18 @@ namespace Ejemplo1_Clases
         {
             FrmListaCentro listarCentro= new FrmListaCentro();
             listarCentro.ShowDialog();
+        }
+
+        private void agregarProfesor_Click(object sender, EventArgs e)
+        {
+            FrmProfesor profesor= new FrmProfesor();
+            profesor.ShowDialog();
+        }
+
+        private void listaDeProfesoresToolStripMenuItem_Click(object sender, EventArgs e)
+        { 
+            FrmListaProfesores listaProfesores= new FrmListaProfesores();
+            listaProfesores.ShowDialog();
         }
     }
 }

@@ -74,12 +74,19 @@
     <Compile Include="FrmListaCentro.Designer.cs">
       <DependentUpon>FrmListaCentro.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmListaProfesores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListaProfesores.Designer.cs">
+      <DependentUpon>FrmListaProfesores.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmProfesor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmProfesor.Designer.cs">
       <DependentUpon>FrmProfesor.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalList.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Personal.cs" />
     <Compile Include="Profesor.cs" />
@@ -96,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmListaCentro.resx">
       <DependentUpon>FrmListaCentro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListaProfesores.resx">
+      <DependentUpon>FrmListaProfesores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProfesor.resx">
       <DependentUpon>FrmProfesor.cs</DependentUpon>

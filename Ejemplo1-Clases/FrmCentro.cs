@@ -11,10 +11,8 @@ using System.Windows.Forms;
 namespace Ejemplo1_Clases
 {
     public partial class FrmCentro : Form
-    {
+    {        
         
-        
-        List<Form1> listCentro = new List<Form1>();
         public FrmCentro()
         {
             InitializeComponent();
@@ -27,6 +25,37 @@ namespace Ejemplo1_Clases
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
+        }
+
+        public void limpiarCampos()
+        {
+            txtNombre.Text = "";
+            txtDireccion.Text = "";
+            txtTelefono.Text = "";
+            txtEmail.Text = "";
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            string nombreCentro = txtNombre.Text;
+            string direccionCentro = txtDireccion.Text;
+            string telefonoCentro = txtTelefono.Text;
+            string emailCentro = txtEmail.Text;
+
+            if (nombreCentro == "" ||direccionCentro == "" || telefonoCentro == "" || emailCentro == "")
+            {
+                MessageBox.Show("Todos los campos deben estar llenos", "Aceptar", MessageBoxButtons.OK);
+            }
+
+            else
+            {
+                var centro = new Centro(nombreCentro, direccionCentro, telefonoCentro, emailCentro);
+
+                GlobalList.Centros.Add(centro);
+                limpiarCampos();
+                MessageBox.Show("Se Guardó correctamente", "Cerrar", MessageBoxButtons.OK);
+            }
+            
         }
     }
 }
